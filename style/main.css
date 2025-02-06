@@ -21,8 +21,7 @@ main .intro-video-container .title-container {
   left: 0;
   width: 100%;
   z-index: 2;
-  box-shadow: 10px 10px 34px 150px rgba(0,0,0,0.4);
-
+  box-shadow: 10px 10px 34px 150px rgba(0, 0, 0, 0.4);
 }
 
 main .intro-video-container .title-container::before {
@@ -35,9 +34,9 @@ main .intro-video-container .title-container::before {
 }
 
 main .intro-video-container .title-container .title {
-    font-family: "Bebas Neue", serif;
-    font-style: normal;
-    font-weight: normal;
+  font-family: "Bebas Neue", serif;
+  font-style: normal;
+  font-weight: normal;
   color: white;
   font-size: 88px;
   width: fit-content;
@@ -50,11 +49,79 @@ main .intro-video-container .title-container .under-title {
   width: fit-content;
   margin: auto;
   padding: 10px 0;
-  font-family: anonymous-pro, sans-serif;
+  font-family: "anonymous-pro", sans-serif;
   font-size: 21px;
   font-weight: 300;
   text-transform: none;
   line-height: 1.8;
   letter-spacing: 1px;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main .section-1 {
+  padding: 50px 0;
+  width: 46%;
+  margin: auto;
+}
+
+main .section-1 h2{
+  z-index: 0;
+  font-family: bebas-neue-by-fontfabric,sans-serif;
+  font-size: 58px;
+  font-weight: bold;
+  text-transform: none;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: rgba(0,0,0,1);
+  text-align: left;
+}
+
+main .section-1 p{
+  font-family: "anonymous-pro", monospace;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1.8;
+  letter-spacing: normal;
+  overflow-wrap: break-word;
+  color: rgba(17,26,11,1);
+  padding: 40px 0;
+}
+
+main .section-1 .images-container{
+
+}
+
+main .section-1 .images-container .first-image-set{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2%;
+  
+}
+
+main .section-1 .images-container .first-image-set img{
+  width: 49%;
+}
+
+main .section-1 .images-container .second-image-set{
+  height: 555px;
+  overflow: hidden;
+  padding-bottom: 2%;
+  
+}
+
+main .section-1 .images-container .second-image-set img{
+  height: 100%;
+}
+
+main .section-1 .images-container .third-image-set{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2%;
+  
+}
+
+main .section-1 .images-container .third-image-set img{
+  width: 49%;
 }
