@@ -21,14 +21,25 @@ body {
   width: 100%;
 }
 
-body .bg-image-container {
+/* Background images*/
+body .bg-image-container{
+  height: 100vh;
   width: 100%;
-  position: relative;
-  min-height: 100vh;
-  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
-body .bg-image-container img {
+
+body .bg-image-container img{
+  width: 100%;
+  height: 100vh;
+  object-fit:cover;
+}
+
+/* body .bg-image-container img {
   width: 100%;
   height: 33%;
   position: absolute;
@@ -36,7 +47,7 @@ body .bg-image-container img {
   left: 0;
   content: "";
   transition: all 5s;
-}
+} */
 
 body .bg-image-container img:nth-child(1) {
   opacity: 1;

@@ -23,7 +23,7 @@ main .intro-video-container .title-container {
   width: 100%;
   z-index: 2;
   box-shadow: 10px 10px 34px 100vh rgba(0, 0, 0, 0.4);
-  transition: top 0.05s ease-out; 
+  transition: top 0.05s ease-out;
 }
 
 main .intro-video-container .title-container::before {
@@ -62,8 +62,14 @@ main .intro-video-container .title-container .under-title {
 
 main .section-1 {
   padding: 50px 0;
-  width: 46%;
+  width: 100;
   margin: auto;
+  background-color: white;
+  position: relative;
+  border-bottom: 2px solid #6b646445;
+  border-bottom-style: groove;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(59px);
 }
 
 main .section-1 h2 {
@@ -76,6 +82,9 @@ main .section-1 h2 {
   letter-spacing: normal;
   color: rgba(0, 0, 0, 1);
   text-align: left;
+  position: relative;
+  width: 45%;
+  margin: auto;
 }
 
 main .section-1 p {
@@ -89,6 +98,9 @@ main .section-1 p {
   overflow-wrap: break-word;
   color: rgba(17, 26, 11, 1);
   padding: 40px 0;
+  position: relative;
+  width: 45%;
+  margin: auto;
 }
 
 main .section-1 .images-container {
@@ -97,12 +109,14 @@ main .section-1 .images-container {
 main .section-1 .images-container .first-image-set {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
+  width: 45%;
+  margin: auto;
 }
 
 main .section-1 .images-container .first-image-set img {
   width: 49%;
-  transition: all 1s ease-out;
+  transition: all 1.5s ease-out;
   opacity: 0;
 }
 
@@ -117,25 +131,35 @@ main .section-1 .images-container .first-image-set img:nth-child(2) {
 main .section-1 .images-container .second-image-set {
   height: 555px;
   overflow: hidden;
-  padding-bottom: 2%;
+  padding-bottom: 1%;
+  width: 45%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main .section-1 .images-container .second-image-set img {
-  height: 100%;
-  transition: opacity 1s ease-in-out;
+  height: 50%;
+  width: 50%;
+  transition: all 2s ease-in-out;
   opacity: 0;
 }
 
 .fade-in {
-  animation: fadeIn 1.5s ease-out forwards;
+  animation: fadeIn 2s ease-out forwards;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
+    width: 50%;
+    height: 50%;
   }
   to {
     opacity: 1;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -143,11 +167,13 @@ main .section-1 .images-container .third-image-set {
   display: flex;
   justify-content: space-between;
   padding-bottom: 2%;
+  margin: auto;
+  width: 45%;
 }
 
 main .section-1 .images-container .third-image-set img {
   width: 49%;
-  transition: all 1s ease-out;
+  transition: all 1.5s ease-out;
   opacity: 0;
 }
 
@@ -176,6 +202,7 @@ main .section-2 div {
   max-width: 580px;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 
 main .section-2 div h3 {
