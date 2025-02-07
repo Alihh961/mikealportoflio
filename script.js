@@ -83,16 +83,13 @@ function handleScrollingDown() {
   const parentHeight = parent.clientHeight;
   const topPercentage = (topPx / parentHeight) * 100;
   let roundedTop = Math.round(topPercentage);
-  console.log(roundedTop);
 
   if (roundedTop < 70) {
-
     titleContainer.style.top = roundedTop + 1 + "%";
   }
 }
 
-function handleScrollingUp(){
-
+function handleScrollingUp() {
   const parent = titleContainer.offsetParent || titleContainer.parentElement;
   const topPx = titleContainer.offsetTop;
   const parentHeight = parent.clientHeight;
@@ -100,18 +97,18 @@ function handleScrollingUp(){
   let roundedTop = Math.round(topPercentage);
 
 
-  console.log(titleContainer.getBoundingClientRect())
 
-  if(titleContainer.getBoundingClientRect().top >= 50){
-    if(70 >= roundedTop && 40 <= roundedTop){
+  if (titleContainer.getBoundingClientRect().top >= 50) {
+    if (70 >= roundedTop && 40 <= roundedTop) {
       titleContainer.style.top = roundedTop - 1 + "%";
-  
     }
   }
 
+  if (window.scrollY === 0) {  
+    titleContainer.style.top = "40%";
+    console.log('top')
 }
-
-
+}
 
 let lastScrollTop = 0;
 window.addEventListener("scroll", () => {
