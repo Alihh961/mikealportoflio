@@ -1,20 +1,12 @@
 console.log("Script file works!");
 
-// let secondSection = document.querySelector("main .section-2");
-// let firstImage = secondSection.querySelector("img:nth-child(1)");
-// let secondImage = secondSection.querySelector("img:nth-child(2)");
-// let thirdImage = secondSection.querySelector("img:nth-child(3)");
-
-// let testButton = secondSection.querySelector('button');
-
-// testButton.addEventListener('click' , ()=>{
-//     firstImage.style.opacity = '0';
-//     secondImage.style.opacity = '1';
-
-// })
+// Oblige the page to go to the top eveytime the user reload
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = "manual";
+}
 
 /// First Section Images Animations ///
-
+if(true){
 /// First Two Images
 
 let imageOne = document.getElementById("imageOne");
@@ -67,48 +59,53 @@ window.addEventListener("scroll", function () {
 });
 
 checkThirdImagePosition();
+}
 
 /// Move titlecontainer onscroll
-
-const titleContainer = document.querySelector(".title-container");
-const wrapper = document.querySelector(".intro-video-container");
-
-function handleScrollingDown() {
-  // const rect = titleContainer.getBoundingClientRect();
-  // const wrapperRect = wrapper.getBoundingClientRect();
-  // const windowHeight = window.innerHeight;
-
-  const parent = titleContainer.offsetParent || titleContainer.parentElement;
-  const topPx = titleContainer.offsetTop;
-  const parentHeight = parent.clientHeight;
-  const topPercentage = (topPx / parentHeight) * 100;
-  let roundedTop = Math.round(topPercentage);
-
-  if (roundedTop < 70) {
-    titleContainer.style.top = roundedTop + 1 + "%";
-  }
-}
-
-function handleScrollingUp() {
-  const parent = titleContainer.offsetParent || titleContainer.parentElement;
-  const topPx = titleContainer.offsetTop;
-  const parentHeight = parent.clientHeight;
-  const topPercentage = (topPx / parentHeight) * 100;
-  let roundedTop = Math.round(topPercentage);
-
-
-
-  if (titleContainer.getBoundingClientRect().top >= 50) {
-    if (70 >= roundedTop && 40 <= roundedTop) {
-      titleContainer.style.top = roundedTop - 1 + "%";
+if(true){
+  const titleContainer = document.querySelector(".title-container");
+  const wrapper = document.querySelector(".intro-video-container");
+  
+  function handleScrollingDown() {
+    // const rect = titleContainer.getBoundingClientRect();
+    // const wrapperRect = wrapper.getBoundingClientRect();
+    // const windowHeight = window.innerHeight;
+  
+    const parent = titleContainer.offsetParent || titleContainer.parentElement;
+    const topPx = titleContainer.offsetTop;
+    const parentHeight = parent.clientHeight;
+    const topPercentage = (topPx / parentHeight) * 100;
+    let roundedTop = Math.round(topPercentage);
+  
+    if (roundedTop < 70) {
+      titleContainer.style.top = roundedTop + 1 + "%";
     }
   }
+  
+  function handleScrollingUp() {
+    const parent = titleContainer.offsetParent || titleContainer.parentElement;
+    const topPx = titleContainer.offsetTop;
+    const parentHeight = parent.clientHeight;
+    const topPercentage = (topPx / parentHeight) * 100;
+    let roundedTop = Math.round(topPercentage);
+  
+  
+  
+    if (titleContainer.getBoundingClientRect().top >= 50) {
+      if (70 >= roundedTop && 40 <= roundedTop) {
+        titleContainer.style.top = roundedTop - 1 + "%";
+      }
+    }
+  
+    if (window.scrollY === 0) {  
+      titleContainer.style.top = "40%";
+      console.log('top')
+  }
+  }
+  
+}
 
-  if (window.scrollY === 0) {  
-    titleContainer.style.top = "40%";
-    console.log('top')
-}
-}
+/// Changing background Images on scroll
 
 let lastScrollTop = 0;
 window.addEventListener("scroll", () => {
@@ -122,3 +119,8 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollTop;
 });
+
+
+
+
+

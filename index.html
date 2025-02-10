@@ -8,16 +8,11 @@
     <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
 
     <script src="./script.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
   <body>
-
-
-    <div class="bg-image-container">
-      <img src="./images/Cocktail 2 1.png" alt="" class="first-bg-image"/>
-      <img src="./images/Pic 5.jpg" alt="" class="second-bg-image"/>
-      <img src="./images/Pic 8.jpg" alt="" class="third-bg-image"/>
-    </div>
-
     <header>
       <div class="header-container">
         <img src="./images/favicon.png" alt="logo" />
@@ -25,7 +20,7 @@
     </header>
 
     <main>
-      <div class="intro-video-container">
+      <div class="intro-video-container" id="header">
         <img src="./images/Interieur 5.png" alt="intro video" />
         <div class="title-container">
           <h2 class="title">MIKAEL ABDALLAH</h2>
@@ -60,16 +55,20 @@
         </div>
       </div>
 
-      <div class="section-2">
-        <div>
+      <section class="sec">
+        <div class="bg"></div>
+        <div class="div">
           <h3>DU REBUT À LA BEAUTÉ</h3>
           <p>
             De l'idée au produit fini, je réalise des projets uniques et
             percutants, adaptés à vos besoins.
           </p>
         </div>
+      </section>
 
-        <div>
+      <section class="sec">
+        <div class="bg"></div>
+        <div class="div">
           <h3>SERVICES PROPOSÉS</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
@@ -78,8 +77,11 @@
             dicta eveniet voluptates?
           </p>
         </div>
+      </section>
 
-        <div>
+      <section class="sec">
+        <div class="bg"></div>
+        <div class="div">
           <h3>DISCUTONS-EN</h3>
           <p>
             Chaque projet est unique, tout comme vos attentes. Je suis à votre
@@ -89,9 +91,56 @@
             un projet qui vous ressemble et dépasse vos attentes.
           </p>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer></footer>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      let getRatio = (el) =>
+        window.innerHeight / (window.innerHeight + el.offsetHeight);
+
+      const images = [
+        "./images/Cocktail 2 1.png",
+        "./images/Pic 5.jpg",
+        "./images/Pic 8.jpg",
+      ];
+
+      gsap.utils.toArray(".sec").forEach((section, i) => {
+        section.bg = section.querySelector(".bg");
+
+        // Give the backgrounds some random images
+        if (images[i]) {
+          console.log(`${images[i]}`);
+          section.bg.style.backgroundImage = `url('${images[i]}')`;
+        }
+
+        // the first image (i === 0) should be handled differently because it should start at the very top.
+        // use function-based values in order to keep things responsive
+        gsap.fromTo(
+          section.bg,
+          {
+            backgroundPosition: () =>
+              i
+                ? `50% ${-window.innerHeight * getRatio(section)}px`
+                : "50% 0px",
+          },
+          {
+            backgroundPosition: () =>
+              `50% ${window.innerHeight * (1 - getRatio(section))}px`,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: () => (i ? "top bottom" : "top top"),
+              end: "bottom top",
+              scrub: true,
+              invalidateOnRefresh: true, // to make it responsive
+            },
+          }
+        );
+      });
+    </script>
   </body>
 </html>
