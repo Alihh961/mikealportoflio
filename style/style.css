@@ -1,5 +1,7 @@
 @import url("./header.css");
 @import url("./main.css");
+@import url("./blabla.css");
+
 @import url("./services-section.css");
 @import url("./our-clients-section.css");
 @import url("./footer.css");
@@ -19,6 +21,7 @@
 }
 html {
   width: 100%;
+  background-color: rgb(22, 26, 66);
 }
 
 body {
@@ -33,43 +36,4 @@ body {
   display: none !important;
 }
 
-/* Background images*/
-body .bg-image-container{
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-}
-
-
-body .bg-image-container img{
-  width: 100%;
-  height: 100vh;
-  object-fit:cover;
-}
-
-/* body .bg-image-container img {
-  width: 100%;
-  height: 33%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  transition: all 5s;
-} */
-
-body .bg-image-container img:nth-child(1) {
-  opacity: 1;
-}
-
-body .bg-image-container img:nth-child(2) {
-  opacity: 0;
-}
-
-body .bg-image-container img:nth-child(3) {
-  opacity: 0;
-}
 

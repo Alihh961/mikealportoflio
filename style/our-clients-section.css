@@ -5,7 +5,8 @@
  .our-clients-section {
 
     width: 100%;
-    background-color: black;
+    background-color: #161a42;
+    position: relative;
     min-height: 100vh;
     padding: 5% 0;
     border-top: 4px groove rgba(235, 1, 173 , 0.5);
@@ -25,53 +26,6 @@
     margin-bottom: 250px;
     margin-top: 50px; 
 }
-
-/* .our-clients-section::before {
-
-}
-
-.our-clients-section div.clients-container {
-    width: fit-content;
-    background-color: white;
-    border-radius: 25px;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 150px auto auto auto;
-    padding: 25px 20px;
-}
-
-.our-clients-section .clients-container div{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-
-}
-
-.our-clients-section .clients-container div img{
-    width: 150px;
-    height: 150px;
-    border: 1px solid black;
-    border-radius: 50%;
-
-}
-
-.our-clients-section .clients-container div h5{
-    text-transform: capitalize;
-    color: black;
-
-}
-
-
-.our-clients-section iframe {
-    width: 100%;
-    height: 75vh;
-} */
 
 
 /* Sliders */

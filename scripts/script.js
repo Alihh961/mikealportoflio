@@ -105,23 +105,36 @@ if(true){
 
 /// Changing background Images on scroll
 
-let lastScrollTop = 0;
-window.addEventListener("scroll", () => {
-  let scrollTop = window.scrollY || document.documentElement.scrollTop;
+// init controller
+var controller = new ScrollMagic.Controller();
 
-  if (scrollTop > lastScrollTop) {
-    handleScrollingDown();
-  } else if (scrollTop < lastScrollTop) {
-    handleScrollingUp();
-  }
 
-  lastScrollTop = scrollTop;
-});
+// build scene
+var scene = new ScrollMagic.Scene({triggerElement: "#section1"})
+	.setClassToggle("#image1", "active") // add class toggle
+    .addTo(controller);
+var scene = new ScrollMagic.Scene({triggerElement: "#section1"})
+	.setClassToggle("#section1", "active") // add class toggle
+    .addTo(controller);
+
+var scene = new ScrollMagic.Scene({triggerElement: "#section2"})
+	.setClassToggle("#image2", "active") // add class toggle
+    .addTo(controller);
+var scene = new ScrollMagic.Scene({triggerElement: "#section2"})
+    .setClassToggle("#section2", "active") // add class toggle
+    .addTo(controller);
+
+var scene = new ScrollMagic.Scene({triggerElement: "#section3"})
+	.setClassToggle("#image3", "active") // add class toggle
+    .addTo(controller);
+var scene = new ScrollMagic.Scene({triggerElement: "#section3"})
+	.setClassToggle("#section3", "active") // add class toggle
+    .addTo(controller);
+
 
 
 
 /// jQuery code for customers section
-
 
 $(document).ready(function(){
   $('.customer-logos').slick({
