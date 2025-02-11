@@ -1,5 +1,10 @@
 @import url("./header.css");
 @import url("./main.css");
+@import url("./services-section.css");
+@import url("./our-clients-section.css");
+@import url("./footer.css");
+
+
 
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
@@ -10,7 +15,6 @@
 * {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
   box-sizing: border-box;
 }
 html {
@@ -19,6 +23,14 @@ html {
 
 body {
   width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.tp-dfwv{
+  display: none !important;
 }
 
 /* Background images*/
@@ -60,7 +72,4 @@ body .bg-image-container img:nth-child(2) {
 body .bg-image-container img:nth-child(3) {
   opacity: 0;
 }
-
-
-
 

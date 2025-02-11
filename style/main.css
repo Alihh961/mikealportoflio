@@ -80,7 +80,8 @@ main .section-1 h2 {
   text-transform: none;
   line-height: 1.2;
   letter-spacing: normal;
-  color: rgba(0, 0, 0, 1);
+  /* color: rgba(0, 0, 0, 1); */
+  color: white;
   text-align: left;
   position: relative;
   width: 45%;
@@ -96,11 +97,13 @@ main .section-1 p {
   line-height: 1.8;
   letter-spacing: normal;
   overflow-wrap: break-word;
-  color: rgba(17, 26, 11, 1);
+  /* color: rgba(17, 26, 11, 1); */
+  color: white;
   padding: 40px 0;
   position: relative;
   width: 45%;
   margin: auto;
+  opacity: 1 !important;
 }
 
 main .section-1 .images-container {
